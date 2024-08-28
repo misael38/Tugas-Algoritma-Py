@@ -1,5 +1,3 @@
-import math
-
 # Menentukan luas bangun datar
 def hasil_luas(nama_bangun, luas, rumus):
     print(f"\n=== Penghitungan {nama_bangun} ===")
@@ -26,20 +24,20 @@ print("===========================================")
 print("Kelompok 1 Algoritma dan Pemrograman (Math)")
 print("===========================================")
 
-print("Anggota Kelompok :")
-print("1. Eufrasia Mokili")
-print("2. Marvil Lawa")
-print("3. Militya Sambali")
-print("4. Misael Telleng")
-print("5. Rachel Manopo")
+print("          Anggota Kelompok :")
+print("          1. Eufrasia Mokili")
+print("          2. Marvil Lawa")
+print("          3. Militya Sambali")
+print("          4. Misael Telleng")
+print("          5. Rachel Manopo")
 print("===========================================")
 # Memilih bangun datar
-print("Berikut Pilihannya:")
-print("1. Luas Bangun Datar")
-print("2. Keliling Bangun Datar")
-print("3. Volume Bangun Ruang")
+print(" Ingin Menghitung Apa? Berikut Pilihannya:")
+print("           1. Luas Bangun Datar")
+print("         2. Keliling Bangun Datar")
+print("          3. Volume Bangun Ruang")
 
-pilihan = input("Masukkan nomor pilihan (1-3): ")
+pilihan = input("Masukkan Nomor Pilihan (1-3): ")
 
 # Memasukkan nilai sesuai dengan pilihan
 if pilihan == '1':
@@ -53,7 +51,7 @@ if pilihan == '1':
     print("7. Belah Ketupat")
     print("8. Layang Layang")
 
-    pilihanl = input("Masukkan nomor pilihan (1-8): ")
+    pilihanl = input("Masukkan Nomor Pilihan (1-8): ")
 
     if pilihanl == '1':
         s = float(input("Masukkan panjang sisi persegi: "))
@@ -77,7 +75,7 @@ if pilihan == '1':
 
     elif pilihanl == '4':
         r = float(input("Masukkan jari-jari lingkaran: "))
-        luas = math.pi * r * r
+        luas = 3.14 * r * r
         rumus = ("L = pi * r * r")
         hasil_luas("Lingkaran", luas, rumus)
 
@@ -146,7 +144,7 @@ elif pilihan == '2':
 
     elif pilihank == '4':
         r = float(input("Masukkan Jari - Jari Lingkaran: "))
-        keliling = math.pi * 2 * r
+        keliling = 3.14 * 2 * r
         rumus = ("K = pi * 2 * r")
         hasil_keliling("Lingkaran", keliling, rumus)
 
@@ -192,7 +190,6 @@ elif pilihan == '3':
 
     
     pilihanv = input("Masukkan Nomor Pilihan (1-8): ")
-
     if pilihanv == '1':
         s = float(input("Masukkan Panjang Sisi Kubus: "))
         volume = s * s * s
@@ -224,30 +221,41 @@ elif pilihan == '3':
         hasil_volume("Limas Segitiga", volume, rumus)
 
     elif pilihanv == '5':
-        s = float(input("Masukkan Alas Limas Segiempat Persegi: "))
-        t = float(input("Masukkan Tinggi Limas Segiempat Persegi: "))
-        rumus = ("V = s * s * s")
-        hasil_volume("Limas Segiempat Persegi", rumus)
+        print("Silahkan Pilih Nomor Alas Limas Segi Empat Yang Ingin Dihitung Volumenya")
+        print("1. Alas Persegi")
+        print("2. Alas Persegi Panjang")
+        pilihanalas = input("Masukkan Nomor Alas Limas Segiempat: ")
+        if pilihanalas == '1':
+            s = float(input("Masukkan Panjang Sisi Alas Persegi Limas Segiempat: "))
+            t = float(input("Masukkan Tinggi Limas Segiempat: "))
+            volume = s * s * t/3
+            rumus = ("1/3 * s * s * t")
+            hasil_volume("Limas Segiempat Alas Persegi", volume, rumus)
+
+        elif pilihanalas == '2':
+            p = float(input("Masukkan Panjang Alas Persegi Panjang Limas Segiempat: "))
+            l = float(input("Masukkan Lebar Alas Persegi Panjang Limas Segiempat: "))
+            t = float(input("Masukkan Tinggi Limas Segiempat: "))
+            volume = p * l * t/3
+            rumus = ("1/3 * p * l * t")
+            hasil_volume("Limas Segiempat Alas Persegi Panjang", volume, rumus)
        
     elif pilihanv == '6':
         r = float(input("Masukkan Jari Jari Tabung: "))
         t = float(input("Masukkan Tinggi Tabung: "))
-        volume = math.pi * r * r * t
+        volume = 3.14 * r * r * t
         rumus = ("V = pi * r * r * t")
         hasil_volume("Tabung", volume, rumus)
 
     elif pilihanv == '7':
         r = float(input("Masukkan Jari Jari Kerucut: "))
         t = float(input("Masukkan Tinggi Kerucut: "))
-        volume = math.pi * r * r * t/3
+        volume = 3.14 * r * r * t/3
         rumus = ("V = 1/3 * pi * r * r * t")
-        hasil_volume("Kerucut", volume)
+        hasil_volume("Kerucut", volume, rumus)
 
     elif pilihanv == '8':
         r = float(input("Masukkan Jari Jari Bola: "))
-        volume = math.pi * 4 * r * r * r/3
+        volume = 3.14 * 4 * r * r * r/3
         rumus = ("V = 4/3 * pi * r * r * r")
-        hasil_volume("Kerucut", volume)
-
-else:
-    print("Pilihan Tidak Valid! Silahkan Memilih Nomor (1-3)")
+        hasil_volume("Bola", volume, rumus)
