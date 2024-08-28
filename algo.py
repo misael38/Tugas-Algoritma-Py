@@ -3,29 +3,36 @@ import math
 # Menentukan luas bangun datar
 def hasil_luas(nama_bangun, luas, rumus):
     print(f"\n=== Penghitungan {nama_bangun} ===")
-    print(f"Dengan Rumus : {rumus}, sehingga didapat:")
-    print(f"Luas = {luas} cm")
+    print(f"Dengan Rumus {rumus}, sehingga didapat:")
+    print(f"Luas = {luas} cm^2")
     print("=========================")
 
 # Menentukan keliling bangun datar
 def hasil_keliling(nama_bangun, keliling, rumus):
     print(f"\n=== Keliling {nama_bangun} ===")
-    print(f"Dengan Rumus : {rumus}, sehingga didapat:")
+    print(f"Dengan Rumus {rumus}, sehingga didapat:")
     print(f"Keliling: {keliling} cm")
     print("=========================")
     
 # Menentukan volume bangun ruang
 def hasil_volume(nama_bangun, volume, rumus):
     print(f"\n=== Keliling {nama_bangun} ===")
-    print(f"Dengan Rumus : {rumus}, sehingga didapat:")
-    print(f"Volume: {volume} cm")
+    print(f"Dengan Rumus {rumus}, sehingga didapat:")
+    print(f"Volume: {volume} cm^3")
     print("=========================")
 
 # Bingkai judul program
-print("===============================")
-print("INGIN MENGHITUNG APA HARI INI?")
-print("===============================")
+print("===========================================")
+print("Kelompok 1 Algoritma dan Pemrograman (Math)")
+print("===========================================")
 
+print("Anggota Kelompok :")
+print("1. Eufrasia Mokili")
+print("2. Marvil Lawa")
+print("3. Militya Sambali")
+print("4. Misael Telleng")
+print("5. Rachel Manopo")
+print("===========================================")
 # Memilih bangun datar
 print("Berikut Pilihannya:")
 print("1. Luas Bangun Datar")
@@ -46,12 +53,12 @@ if pilihan == '1':
     print("7. Belah Ketupat")
     print("8. Layang Layang")
 
-    pilihanl = input("Masukkan nomor pilihan (1-3): ")
+    pilihanl = input("Masukkan nomor pilihan (1-8): ")
 
     if pilihanl == '1':
         s = float(input("Masukkan panjang sisi persegi: "))
         luas = s * s
-        rumus = ("s * s")
+        rumus = ("L = s * s")
         hasil_luas("Persegi", luas, rumus)
 
     elif pilihanl == '2':
@@ -114,10 +121,10 @@ elif pilihan == '2':
     print("7. Belah Ketupat")
     print("8. Layang Layang")
 
-    pilihank = input("Masukkan nomor pilihan (1-3): ")
+    pilihank = input("Masukkan nomor pilihan (1-8): ")
 
     if pilihank == '1':
-        s = float(input("Masukkan panjang sisi persegi: "))
+        s = float(input("Masukkan Panjang Sisi Persegi: "))
         keliling = 4 * s
         rumus = ("K = 4 * s")
         hasil_keliling("Persegi", keliling, rumus)
@@ -130,47 +137,47 @@ elif pilihan == '2':
         hasil_keliling("Persegi Panjang", keliling, rumus)
 
     elif pilihank == '3':
-        a = float(input("Masukkan sisi a segitiga: "))
-        b = float(input("Masukkan sisi b segitiga: "))
-        c = float(input("Masukkan sisi c segitiga: "))
+        a = float(input("Masukkan Sisi a Segitiga: "))
+        b = float(input("Masukkan Sisi b Segitiga: "))
+        c = float(input("Masukkan Sisi c Segitiga: "))
         keliling = a + b + c
         rumus = ("K = a + b + c")
         hasil_keliling("Segitiga", keliling, rumus)
 
     elif pilihank == '4':
-        r = float(input("Masukkan jari-jari lingkaran: "))
+        r = float(input("Masukkan Jari - Jari Lingkaran: "))
         keliling = math.pi * 2 * r
         rumus = ("K = pi * 2 * r")
-        hasil_keliling("Lingkaran", keliling)
+        hasil_keliling("Lingkaran", keliling, rumus)
 
     elif pilihank == '5':
-        a = float(input("Masukkan sisi a jajar genjang: "))
-        b = float(input("Masukkan sisi b jajar genjang: "))
+        a = float(input("Masukkan Panjang Sisi a Jajar Genjang: "))
+        b = float(input("Masukkan Panjang Sisi b Jajar Genjang: "))
         keliling = 2 * (a + b)
         rumus = ("K = 2 * (a + b)")
         hasil_keliling("Jajar Genjang", keliling, rumus)
 
     elif pilihank == '6':
-        a = float(input("Masukkan panjang sisi a Trapesium: "))
-        b = float(input("Masukkan panjang sisi b Trapesium: "))
-        c = float(input("Masukkan panjang sisi c Trapesium: "))
-        d = float(input("Masukkan panjang sisi d Trapesium: "))
+        a = float(input("Masukkan Panjang Sisi a Trapesium: "))
+        b = float(input("Masukkan Panjang Sisi b Trapesium: "))
+        c = float(input("Masukkan Panjang Sisi c Trapesium: "))
+        d = float(input("Masukkan Panjang Sisi d Trapesium: "))
         keliling = a + b + c + d
         rumus = ("K = a + b + c + d")
         hasil_keliling("Trapesium", keliling, rumus)
 
     elif pilihank == '7':
-        s = float(input("Masukkan panjang sisi belah ketupat: "))
+        s = float(input("Masukkan Panjang Sisi Belah Ketupat: "))
         keliling = 4 * s
         rumus = ("K = 4 * s")
-        hasil_keliling("belah ketupat", keliling, rumus)
+        hasil_keliling("Belah Ketupat", keliling, rumus)
 
     elif pilihank == '8':
-        a = float(input("Masukkan panjang sisi a layang layang: "))
-        b = float(input("Masukkan panjang sisi b layang layang: "))
+        a = float(input("Masukkan Panjang Sisi a Layang Layang: "))
+        b = float(input("Masukkan Panjang Sisi b Layang Layang: "))
         keliling = 2 * (a + b)
         rumus = ("K = 2 * (a + b)")
-        hasil_keliling("Layang layang ", keliling, rumus)
+        hasil_keliling("Layang Layang ", keliling, rumus)
 
 elif pilihan == '3':
     print("Silahkan Pilih Nomor Bangun Datar Yang Ingin Dihitung Volumenya")
@@ -184,10 +191,10 @@ elif pilihan == '3':
     print("8. Bola")
 
     
-    pilihanv = input("Masukkan nomor pilihan (1-3): ")
+    pilihanv = input("Masukkan Nomor Pilihan (1-8): ")
 
     if pilihanv == '1':
-        s = float(input("Masukkan panjang sisi kubus: "))
+        s = float(input("Masukkan Panjang Sisi Kubus: "))
         volume = s * s * s
         rumus = ("V = s * s * s")
         hasil_volume("kubus", volume, rumus)
@@ -206,7 +213,7 @@ elif pilihan == '3':
         t = float(input("Masukkan Tinggi Prisma Segitiga: "))
         volume = a * ta * t/3
         rumus = ("V = 1/3 * a * ta * t")
-        hasil_volume("Prisma", volume, rumus)
+        hasil_volume("Prisma Segitiga", volume, rumus)
 
     elif pilihanv == '4':
         a = float(input("Masukkan Alas Limas Segitiga: "))
@@ -214,23 +221,23 @@ elif pilihan == '3':
         t = float(input("Masukkan Tinggi Limas Segitiga: "))
         volume = a * ta/2 * t/3
         rumus = ("V = 1/3 * 1/2 * a * ta * t")
-        hasil_volume("Limas", volume, rumus)
+        hasil_volume("Limas Segitiga", volume, rumus)
 
     elif pilihanv == '5':
-        s = float(input("Masukkan Alas Limas segiempat persegi: "))
-        t = float(input("Masukkan Tinggi Limas segiempat persegi: "))
+        s = float(input("Masukkan Alas Limas Segiempat Persegi: "))
+        t = float(input("Masukkan Tinggi Limas Segiempat Persegi: "))
         rumus = ("V = s * s * s")
-        hasil_volume("Limas", rumus)
+        hasil_volume("Limas Segiempat Persegi", rumus)
        
     elif pilihanv == '6':
-        r = float(input("Masukkan Jarijari Tabung: "))
+        r = float(input("Masukkan Jari Jari Tabung: "))
         t = float(input("Masukkan Tinggi Tabung: "))
         volume = math.pi * r * r * t
         rumus = ("V = pi * r * r * t")
         hasil_volume("Tabung", volume, rumus)
 
     elif pilihanv == '7':
-        r = float(input("Masukkan Jarijari kerucut: "))
+        r = float(input("Masukkan Jari Jari Kerucut: "))
         t = float(input("Masukkan Tinggi Kerucut: "))
         volume = math.pi * r * r * t/3
         rumus = ("V = 1/3 * pi * r * r * t")
@@ -243,4 +250,4 @@ elif pilihan == '3':
         hasil_volume("Kerucut", volume)
 
 else:
-    print("Pilihan tidak valid.")
+    print("Pilihan Tidak Valid! Silahkan Memilih Nomor (1-3)")
